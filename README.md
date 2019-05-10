@@ -12,8 +12,7 @@ V平台使用类Office界面，简单易用培训成本低、开发效率高。�
 
 # 2. V平台特点
 ## 2.1 配置式开发——降低门槛，提升效率
-[贴图P4]
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/images/Snipaste_2019-05-10_10-17-43.png?raw=true)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/2.1_V%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F.png?raw=true)
 
 通过“控件+规则”的“界面+逻辑”组合方式，V平台可以支持任何形态应用管理软件的开发（功能不足，可通过追加控件或规则解决）。
 1. 首先用“控件”组建出界面形态；        控件包括：按钮、下拉框、列表、工具栏…等一系列构成界面的要素
