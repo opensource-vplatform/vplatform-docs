@@ -2,7 +2,7 @@
 
 # 1. 简介
 
-## 1.1. 概述
+开发基于V3平台的二次开发业务规则。
 
 业务规则，是完成一个业务操作的最小粒度的复用模块，通过不同规则的组合可以完成一个复杂的业务操作。
 
@@ -30,7 +30,7 @@
 - 新建窗体作为规则的编辑器窗体；
 - 根据实际业务需要添加各种控件，以窗体实体为数据载体；
 
-![控件绑定实体字段](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/rule/2.2_controlBindingEntity.pngg)
+![控件绑定实体字段](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/rule/2.2_controlBindingEntity.png)
 
 #### 2.2.2.2. 默认方法
 
