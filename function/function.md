@@ -10,7 +10,7 @@
 
 ### 2.1.1. 新建功能构件
 
-![新建功能构件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true2.1_createFunctionComponent.png)
+![新建功能构件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png)
 
 - 构件导航栏右键菜单-新建功能构件；
 - 构件信息-分类，选择**函数**；
@@ -20,9 +20,9 @@
 
 功能构件-元数据管理，主要是用于描述函数的基本信息和在安装时生成元数据文件。
 
-![元数据管理](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true2.2_metadata_1.png)
+![元数据管理](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.2_metadata_1.png)
 
-![元数据管理](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true2.2_metadata_2.png)
+![元数据管理](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.2_metadata_2.png)
 
 - 编码，函数编码；
 
@@ -38,7 +38,7 @@
 
 - 分类，在表达式编辑器中，选择函数时的分类；
 
-  ![函数分类](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true2.2_metadata_3.png)
+  ![函数分类](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.2_metadata_3.png)
 
 - 是否显示，定义函数是否可见。
 
@@ -70,11 +70,11 @@
 
 - 选择**V3 Webfunc Project**类型，创建工程；
 
-  ![新建工程](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.1_eclipseCreateWebfuncProject.png)
+  ![新建工程](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.1_eclipseCreateWebfuncProject.png)
 
 - 编辑工程信息
 
-  ![工程信息](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.1_webfuncProjectInfo.png)
+  ![工程信息](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.1_webfuncProjectInfo.png)
 
   - Artifact Id，构件id
   - Version，版本号
@@ -84,14 +84,14 @@
 
 - 工程目录
 
-  ![工程目录](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.1_webfuncDir.png)
+  ![工程目录](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.1_webfuncDir.png)
 
   - DemoFunc.js，存放函数功能实现的逻辑；
   - pom.xml，保存函数的版本信息，以及需要引用的其他服务信息；
 
 - js文件实现
 
-  ![js文件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.1_jsFile_2.png)
+  ![js文件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.1_jsFile_2.png)
 
   - main方法，函数实现部分；
   - param变量，通过param来获取函数参数；
@@ -102,7 +102,7 @@
     4. 设置函数返回值；
 - pom.xml
 
-  ![pom.xml](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.1_pomFile.png)
+  ![pom.xml](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.1_pomFile.png)
 
   - 增加函数依赖的vjs定义；
   - 增加函数一致性检查相关配置；
@@ -113,11 +113,11 @@
 
 - 选择**V3 Webfunc Project**类型，创建工程；
 
-  ![新建工程](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.2_eclipseCreateServerfuncProject.png)
+  ![新建工程](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.2_eclipseCreateServerfuncProject.png)
 
 - 编辑工程信息
 
-  ![工程信息](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.2_serverfuncProjectInfo.png)
+  ![工程信息](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.2_serverfuncProjectInfo.png)
 
   - Artifact Id，构件id
   - Version，版本号
@@ -127,21 +127,21 @@
 
 - 工程目录
 
-  ![工程目录](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.2_serverfuncProjectDir.png)
+  ![工程目录](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.2_serverfuncProjectDir.png)
 
   - DemoFunc.java，函数实现部分的java代码；
   - pom.xml，保存函数的版本信息，以及需要引用的其他服务信息；
 
 - java文件实现
 
-  ![java文件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.2_javaSourceCode.png)
+  ![java文件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.2_javaSourceCode.png)
 
   - evaluate方法，函数执行时的入口方法；
   - List args变量，通过args来获取函数参数；
   - return，函数的返回值
 - pom.xml
 
-  ![pom.xml](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true3.2_pomFile.png)
+  ![pom.xml](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/3.2_pomFile.png)
 
   - 增加依赖的定义；
   - 增加函数一致性检查相关配置；
@@ -152,7 +152,7 @@
 
 ### 4.1.1. 部署功能构件
 
-![构件部署](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true4.1_deployComponent.png)
+![构件部署](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/4.1_deployComponent.png)
 
 - 部署到本地，生成构件包到本地，通过分发构件包文件。其他用户在安装构件时，选择“从本地安装”来安装对应的构件包文件；
 
@@ -160,11 +160,11 @@
 
 - 从本地安装，选择本地构件包文件，直接安装该构件包；
 
-  ![构件安装](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true4.1_componentInstall_fromLocal.png)
+  ![构件安装](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/4.1_componentInstall_fromLocal.png)
 
 - 针对函数-功能构件，可以在构件导航栏选中功能构件节点，右键菜单**安装本地功能构件**，把功能构件直接安装到当前的开发系统中。
 
-![安装本地功能构件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true4.1_installComponentToLocal.png)
+![安装本地功能构件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/4.1_installComponentToLocal.png)
 
 - 如何判断函数-功能构件安装成功？
 
@@ -174,17 +174,17 @@
 
 ### 4.2.1. 构件打包
 
-![构件打包](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true4.2_exeMavenInstall.png)
+![构件打包](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/4.2_exeMavenInstall.png)
 
 - 在Eclipse中选中工程节点右键菜单**Run As**，选择**Maven install**
 
-![构件包项目位置](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true4.2_exePackageFile.png)
+![构件包项目位置](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/4.2_exePackageFile.png)
 
 - 执行成功后会在项目的``target``文件夹中生成对应的``jar``文件；
 
 ### 4.2.2. 安装执行系统构件
 
-![安装构件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/2.1_createFunctionComponent.png?raw=true4.2_exeInstallFromLocal.png)
+![安装构件](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/function/4.2_exeInstallFromLocal.png)
 
 1. 进入控制台
     - 开发系统- 开始菜单-> 管理控制台
