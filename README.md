@@ -4,7 +4,7 @@
  V平台面向业务和应用人员，完全无码配置化、集成化开发环境，快速响应客户的需求变化，提高客户价值和满意度的同时数倍提升生产效率。
 
 无码开发技术从根本上解决了长期困扰软件产业和企业规模发展的人员依赖瓶颈，促进软件项目高质量交付、专业化分工和产业化协作。
- 
+
 ## 1.2 自主可控、安全可靠
 V平台使用类Office界面，简单易用培训成本低、开发效率高。无码开发技术极大地降低了软件开发的门槛，支持业务应用驱动的产品开发，不懂编程也能配置化组装开发软件，可以有效将信息化的主导权交还给客户，用户真正成为应用系统的主人。
 
@@ -12,19 +12,18 @@ V平台使用类Office界面，简单易用培训成本低、开发效率高。�
 
 # 2. V平台特点
 ## 2.1 配置式开发——降低门槛，提升效率
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/2.1_V%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F.png?raw=true)
+![配置式开发](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/2.1_V%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F.png?raw=true)
 
 通过“控件+规则”的“界面+逻辑”组合方式，V平台可以支持任何形态应用管理软件的开发（功能不足，可通过追加控件或规则解决）。
 1. 首先用“控件”组建出界面形态；        控件包括：按钮、下拉框、列表、工具栏…等一系列构成界面的要素
 2. 然后用“规则”控制控件，在点击控件时实现运行；  规则包括：命令、逻辑计算、数据关联、引用…等
 
-[贴图P5]
-![Alt text](./1555897742474.png)
+![V平台的设计系统](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/2.1_V%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%B3%BB%E7%BB%9F.png?raw=true))
 
 ## 2.2 标准化
 以传统行为的工业化生产为目标，打造软件开发工业化。
 V平台为软件工业化生产提供了工具和环境，涵盖从需求管理到产品的维护的全过程，包括：开发系统、执行系统、需求管理系统、产品管理系统。除此以外，还建立一套与平台相对应的业务体系，业务体系为每个工作环节提供了相应的方法、流程、模板、模型、标准、规范等，为软件工业化生产提供了方法和规范。
-![Alt text](./1555898908319.png)
+![标准化](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/2.2_%E6%A0%87%E5%87%86%E5%8C%96.png?raw=true)
 
 
 # 3. V平台技术架构体系
@@ -33,20 +32,17 @@ V平台为软件工业化生产提供了工具和环境，涵盖从需求管理�
 
 如果要满足上述的要求，所有的软件工程的的记录文档（包括：需求、设计等）记录都采用了结构化的形式，而且相互之间具有继承性，所以软件工程的资料可以像建筑业的设计图纸一样，在不同的部门之间、公司之间进行传递、支持了协同作业开发同一产品，基干式记录方式由如下的特点(不限与此)
 
-[贴图P14]
-![Alt text](./1555897777591.png)
+![开发工程化](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/3.1_%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%8C%96.png?raw=true)
 
 
 ## 3.1 过程化标准和规范（技术开放化）
 平台采用结构化层次，非核心部分提供开发标准、扩展工具，充分利用外部资源满足不同业务领域快速规模扩张。
 
-[贴图P15]
-![Alt text](./1555897802675.png)
+![技术开放化](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/3.2_%E6%8A%80%E6%9C%AF%E5%BC%80%E6%94%BE%E5%8C%96.png?raw=true)
 
 
 # 4. V平台开放体系
-[贴图]
-![Alt text](./1555904467915.png)
+![技术开放体系](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/intro/4_%E6%8A%80%E6%9C%AF%E5%BC%80%E6%94%BE%E4%BD%93%E7%B3%BB.png?raw=true)
 
 
 ## 4.1 规则
