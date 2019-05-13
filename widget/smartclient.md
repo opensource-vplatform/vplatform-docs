@@ -588,9 +588,9 @@ D:\work\eclipse\eclipse-v3-allinone\workspace\widget-smartclient-JGTextBoxEs\tar
 
 
 
-##5. 验证
+## 5. 验证
 
-####5.1. 部署业务构件demo	    
+#### 5.1. 部署业务构件demo	    
    开发系统新建一个业务构件，新建普通窗体，从工具箱中拖拽JGTextBoxEs控件到右侧窗体中，在最右侧配置文本控件的属性及事件，部署。
    
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557125658515.png)
