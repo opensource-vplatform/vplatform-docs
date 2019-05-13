@@ -10,7 +10,7 @@
 
 2. **控件系列Series**
 	- 控件类型标识，同一类控件，通常使用同一套前端UI实现。
-    
+   
 3. **窗体编码WindowCode**
 	- 当前构件下窗体唯一标识
 
@@ -96,19 +96,23 @@
 - **基本设置**
 
 1. 编码：设置控件的元数据编码（**必填**）
-    > 注意编码的唯一性
-
+    
+> 注意编码的唯一性
+    
 2. 名称：设置控件的名称（**必填**）
 
 3. 版本号：设置控件的版本号（**必填**）
-    > 这里不需要手动修改，默认同步功能构件的版本，只需修改功能构件版本号即可
-
+    
+> 这里不需要手动修改，默认同步功能构件的版本，只需修改功能构件版本号即可
+    
 4. 窗体类型：设置控件用到什么窗体上
-    >可选 普通窗体、网页窗体、移动窗体
-
+    
+>可选 普通窗体、网页窗体、移动窗体
+    
 5. 控件分类：设置控件在工具箱中的分类
-    >可选 通用控件、字段控件、业务控件
-
+    
+>可选 通用控件、字段控件、业务控件
+    
 6. 是否显示：设置控件是否在工具箱中显示
 7. 提供者：设置开发者
 8. 描述：设置控件描述
@@ -116,21 +120,25 @@
 - **平台一致性设置**
 
 1. 一致性校验：设置控件在部署的时候是否需要进行一致性校验
-    >建议启用，可以确保执行系统和开发系统版本一致
-
+    
+>建议启用，可以确保执行系统和开发系统版本一致
+    
 2. 一致性编码：设置一致性校验编码
-    >注意编码唯一性，一般用默认生成的即可
-
+    
+>注意编码唯一性，一般用默认生成的即可
+    
 3. 一致性版本：设置一致性校验的版本
+    
     >默认从1开始，每次多控件属性的增删都应该给其加 1
 
 - **样式设置**
 
   需要将图标文件放到【**构件资源**】中
-    
+  
 1. 控件图标：设置控件在工具箱中显示的小图标
-    >图标大小以 16 * 16 px 为佳
-
+    
+>图标大小以 16 * 16 px 为佳
+    
 2. 样式缩略图：设置控件拖拽到窗体设计器中显示的样式缩略图
 
 3. 样式模板：
@@ -142,33 +150,33 @@
     - 模版一般由html,js ,css ,图片这些组成
     
     > 配置了模版之后, 样式缩略图配置无效
-
+    
     样式界面html模板,使用以下代码继续实现
-
+    
     ```
     <!DOCTYPE HTML>
     <html>
     <head>
     <meta charset="UTF-8">
     <title>basic-demo</title>
-
+    
     <!-- 以下两项不可少，也不可修改， 原本复制过去 -->
     <script>#ScriptLib#</script>
     <style>#CssLib#</style>
-
+    
     </head>
-
+    
     <body>
-
+    
     <div id="content"></div>
-
+    
     <!-- 这个script不能少 原本的复制过去 -->
     <script>
         var data = #Data#;
         var html = template('test', data);
         document.getElementById('content').innerHTML = html;
     </script>
-
+    
     </body>
     </html>
     ```
@@ -178,8 +186,9 @@
   ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126255001.png)
 
 1. 控件扩展：配置控件的扩展点，让该控件可以扩展自己的子控件
-    > 如果该控件支持扩展，在这里配置之后，其他控件可以在【扩展实现】中选择到这里配置的扩展点
-
+    
+> 如果该控件支持扩展，在这里配置之后，其他控件可以在【扩展实现】中选择到这里配置的扩展点
+    
 2. 扩展实现：选择要实现的扩展
     > 选择一个扩展点，该控件将会成功扩展控件的子控件
 
@@ -211,8 +220,9 @@
 - **属性的属性定义**
 
 1. 属性值数据类型
-   > 标识该属性的值是数据类型，如:高度的为 System.Int32
-
+   
+> 标识该属性的值是数据类型，如:高度的为 System.Int32
+   
 2. 属性值编辑器
   
     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126284731.png)
@@ -222,7 +232,7 @@
      > 二次开发的属性编辑器的开发 请查看 【**属性编辑器二次开发**】 流程
 
 3. 自定义下拉选择项数据
-    
+   
      ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126316733.png)
 
      > 自定义下拉选择项数据：在【**选项数据源设置**】窗体配置要显示值和保存值,安装后即可在属性编辑器选择
@@ -235,7 +245,7 @@
      > 定义该属性的初始值(默认值)
 
 5. 属性类型
-    
+   
      ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126343284.png)
 
      > 在属性视图中的分类， 可选 数据、事件、格式、其他
@@ -255,11 +265,13 @@
      > true 启用；false 禁用，属性列表中显示为灰色，不能进行编辑
 
 8. 是否可以编辑
-    > true 可编辑；false 只读
-
+    
+> true 可编辑；false 只读
+    
 9. 显示
-    > 设置是否在属性列表中显示； true 显示、false 隐藏
-
+    
+> 设置是否在属性列表中显示； true 显示、false 隐藏
+    
 10. 常用属性
 
     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110573385.png)
@@ -273,17 +285,21 @@
      > 设置为true之后，在【**默认样式**】的编辑器中可以对其进行编辑，一般为字体，颜色等样式类型才这么弄
 
 12. 是否为实体
-    > 注意：如果该属性确实是实体，请务必设置为true
-
+    
+> 注意：如果该属性确实是实体，请务必设置为true
+    
 13. 是否为实体字段
-    > 注意：如果该属性确实是实体字段，请务必设置为true
-
+    
+> 注意：如果该属性确实是实体字段，请务必设置为true
+    
 14. 属性是否可以生产代码Code
-    > 设置为 false，在属性列表中配置的属性值将不会保存； 默认 true
-
+    
+> 设置为 false，在属性列表中配置的属性值将不会保存； 默认 true
+    
 15. 属性是否部署
-    > 设置为 false，此属性将不会在部署包中生成； 默认 true
-
+    
+> 设置为 false，此属性将不会在部署包中生成； 默认 true
+    
 16. 允许赋值
 
      ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110868570.png)
@@ -529,7 +545,7 @@ UI中的数据变化后，会自动同步到数据源，无需做处理。
 #### 4.1.1. 部署构件
 
  部署到本地，生成构件包到本地，通过分发构件包文件。其他用户在安装构件时，选择“从本地安装”来安装对应的构件包文件
- 
+
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557124795935.png)
 
 
@@ -548,6 +564,7 @@ UI中的数据变化后，会自动同步到数据源，无需做处理。
 
     > 查看在**工具箱**中是否有此控件节点
     
+
   ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557124929467.png)
 
 
@@ -555,7 +572,7 @@ UI中的数据变化后，会自动同步到数据源，无需做处理。
 
 > 注意：以下出现的所有构件名称、打包路径等都是例子；实际名称、路径要以开发的实际情况为准
 
-####4.2.1 构件打包
+#### 4.2.1 构件打包
 
 1. 打包后自动生成构件包
 2. 获取生成构件包的路径
@@ -592,7 +609,7 @@ D:\work\eclipse\eclipse-v3-allinone\workspace\widget-smartclient-JGTextBoxEs\tar
 
 #### 5.1. 部署业务构件demo	    
    开发系统新建一个业务构件，新建普通窗体，从工具箱中拖拽JGTextBoxEs控件到右侧窗体中，在最右侧配置文本控件的属性及事件，部署。
-   
+
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557125658515.png)
 
 #### 5.2. 验证
