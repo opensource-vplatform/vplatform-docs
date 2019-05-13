@@ -76,6 +76,7 @@
 ### 2.2.3. 执行开发系统方法
 
 某些场景需要获取开发系统配置期的数据，如当前窗体的控件，控件属性等。需要通过**执行开发系统方法**规则来处理；
+[执行开发系统方法列表](<https://github.com/opensource-vplatform/vplatform-docs/blob/master/rule/executeNativeMethodList.md>)
 
 ![执行开发系统方法](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/rule/2.3_execDevNativeMethod.png)
 
