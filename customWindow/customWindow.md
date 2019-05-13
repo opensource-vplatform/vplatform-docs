@@ -20,7 +20,7 @@
 * 本地开发推荐编辑器VSCode（https://code.visualstudio.com/）
 
 
-![Alt text](./1555919091559.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555919091559.png)
 
 ## 三、使用指令
 *  **v3:package**   使用webpack打包  npm run v3:package
@@ -32,21 +32,21 @@
 ### 1、创建自定义模板窗体
 > 当前支持网页窗体、移动窗体
 
-![Alt text](./1555919266183.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555919266183.png)
 
 ### 2 、创建实体并设置测试数据
 
-![Alt text](./1555919593370.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555919593370.png)
 
 ### 3 、导出构件工程
 
-![Alt text](./1555919642038.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555919642038.png)
 
-![Alt text](./1555919644715.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555919644715.png)
 
 ## 五、工程目录结构
 
-![Alt text](./1555921020794.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555921020794.png)
 
 *  **node_modules：**生成的相关依赖模块（无需关注）
 
@@ -62,7 +62,7 @@
 
 *  **package.json：**配置说明
 
-![Alt text](./1555921348239.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555921348239.png)
 
 *  **entities.js：**数据实体定义（无需关注）
 
@@ -164,7 +164,7 @@ import Swiper from '@share/swiper.min.js';
 import '@share/swiper.min.css';
 ```
 
-![Alt text](./1555922717541.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555922717541.png)
 
 **方式3**:引入Vue组件
 
@@ -223,15 +223,15 @@ onClick:function(){
 
 * npm run v3:package
 
-![Alt text](./1555932493243.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555932493243.png)
 
-![Alt text](./1555932543181.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555932543181.png)
 
 * npm run v3:start
 
-![Alt text](./1555932570038.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555932570038.png)
 
-![Alt text](./1555932579288.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555932579288.png)
 
 ### 6、约束规范
 
@@ -249,25 +249,25 @@ onClick:function(){
 
 如下图，两个地方皆可导入构件代码工程
 
-![Alt text](./1555933211142.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933211142.png)
 
-![Alt text](./1555933215810.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933215810.png)
 
 
 ### 2、在开发系统编辑器打开
 
-![Alt text](./1555933432305.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933432305.png)
 
-![Alt text](./1555933440265.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933440265.png)
 
-![Alt text](./1555933443733.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933443733.png)
 
-![Alt text](./1555933446612.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933446612.png)
 
 ### 3、部署构件
 
-![Alt text](./1555933468671.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933468671.png)
 
 ### 4、预览效果
 
-![Alt text](./1555933472474.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/customWindow/1555933472474.png)
