@@ -1,7 +1,10 @@
 # 控件二次开发
 
 ## 1. 简介
+
 开发基于V3平台的二次开发控件
+
+### 1.1. 概述
 
 ### 1.2. 名词解释
 
@@ -10,7 +13,7 @@
 
 2. **控件系列Series**
 	- 控件类型标识，同一类控件，通常使用同一套前端UI实现。
-   
+    
 3. **窗体编码WindowCode**
 	- 当前构件下窗体唯一标识
 
@@ -61,8 +64,11 @@
 - 目前控件主要有三个控件系列，也对应着有三个渲染引擎。
 
 1. 普通窗体
+	
 2. 网页窗体
+	
 3. 移动窗体
+	
 
 > 注意：下面讲是 **普通窗体** 的开发，以文本输入框为例。
 
@@ -71,74 +77,78 @@
 #### 2.1. 功能构件
 
 ##### 2.1.1. 新建功能构件
+
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557109447222.png)
 
- ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557109087223.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557714257252.png)
+
 
 
 1. 构件树顶部工具栏-新建功能构件
+
 2. 构件树右键菜单-新建功能构件
+
 3. 构件信息-分类，选择【**控件**】
+
 4. 点击“确定”按钮后创建控件-功能构件
+
 5. 新建完成，在构件中只需要关注【**资源管理**】和【**元数据管理**】
 
- ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557109566250.png)
+ ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557714299730.png)
+
 
 
 #### 2.2.2. 元数据管理
 
 1. 配置控件信息；
+
 2. 配置控件属性信息
 
 ##### 2.2.2.1. 控件定义
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557109745127.png)
+
+ ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557714415013.png)
+
 
 - **基本设置**
 
 1. 编码：设置控件的元数据编码（**必填**）
-    
-> 注意编码的唯一性
-    
+    > 注意编码的唯一性
+
 2. 名称：设置控件的名称（**必填**）
 
 3. 版本号：设置控件的版本号（**必填**）
-    
-> 这里不需要手动修改，默认同步功能构件的版本，只需修改功能构件版本号即可
-    
+    > 这里不需要手动修改，默认同步功能构件的版本，只需修改功能构件版本号即可
+
 4. 窗体类型：设置控件用到什么窗体上
-    
->可选 普通窗体、网页窗体、移动窗体
-    
+    >可选 普通窗体、网页窗体、移动窗体
+
 5. 控件分类：设置控件在工具箱中的分类
-    
->可选 通用控件、字段控件、业务控件
-    
+    >可选 通用控件、字段控件、业务控件
+
 6. 是否显示：设置控件是否在工具箱中显示
+
 7. 提供者：设置开发者
+
 8. 描述：设置控件描述
 
 - **平台一致性设置**
 
 1. 一致性校验：设置控件在部署的时候是否需要进行一致性校验
-    
->建议启用，可以确保执行系统和开发系统版本一致
-    
+    >建议启用，可以确保执行系统和开发系统版本一致
+
 2. 一致性编码：设置一致性校验编码
-    
->注意编码唯一性，一般用默认生成的即可
-    
+    >注意编码唯一性，一般用默认生成的即可
+
 3. 一致性版本：设置一致性校验的版本
-    
     >默认从1开始，每次多控件属性的增删都应该给其加 1
 
 - **样式设置**
 
   需要将图标文件放到【**构件资源**】中
-  
+    
 1. 控件图标：设置控件在工具箱中显示的小图标
-    
->图标大小以 16 * 16 px 为佳
-    
+    >图标大小以 16 * 16 px 为佳
+
 2. 样式缩略图：设置控件拖拽到窗体设计器中显示的样式缩略图
 
 3. 样式模板：
@@ -147,36 +157,46 @@
 
 
     - 模版是通过html形式编写,用于在将控件拖到开发系统画布之后的显示效果
+··
     - 模版一般由html,js ,css ,图片这些组成
     
     > 配置了模版之后, 样式缩略图配置无效
-    
+
     样式界面html模板,使用以下代码继续实现
-    
+
     ```
     <!DOCTYPE HTML>
     <html>
     <head>
     <meta charset="UTF-8">
     <title>basic-demo</title>
-    
+
     <!-- 以下两项不可少，也不可修改， 原本复制过去 -->
     <script>#ScriptLib#</script>
     <style>#CssLib#</style>
-    
+
     </head>
-    
+
     <body>
-    
+    <script id="test" type="text/html">
+        /* 标签写这里 */
+
+        /* 示例 ：双大括号{{}} 包裹这就是对于的属性编码 */
+        /*
+        <div class="col-xs-{{DisplayScale}} row" style="padding-top:{{Top}}px;padding-right:{{Right}}px;padding-bottom:{{Bottom}}px;padding-left:{{Left}}px;">
+            <button  type="button" class="btns btns-default"style="border-radius:{{Radius}};background-color:{{LabelBackColor}};color:{{LabelForeColor}};">{{LabelText}}</button>
+        </div>
+        */
+    </script>
     <div id="content"></div>
-    
+
     <!-- 这个script不能少 原本的复制过去 -->
     <script>
         var data = #Data#;
         var html = template('test', data);
         document.getElementById('content').innerHTML = html;
     </script>
-    
+
     </body>
     </html>
     ```
@@ -186,9 +206,8 @@
   ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126255001.png)
 
 1. 控件扩展：配置控件的扩展点，让该控件可以扩展自己的子控件
-    
-> 如果该控件支持扩展，在这里配置之后，其他控件可以在【扩展实现】中选择到这里配置的扩展点
-    
+    > 如果该控件支持扩展，在这里配置之后，其他控件可以在【扩展实现】中选择到这里配置的扩展点
+
 2. 扩展实现：选择要实现的扩展
     > 选择一个扩展点，该控件将会成功扩展控件的子控件
 
@@ -210,7 +229,7 @@
 1. 新增属性：新增一个属性
    > 属性编码和属性名称都是 必填；平台内置了一些常用的，点击【下拉选择】一个想要的，或者选中文本框，自行输入属性编码和名称
   
-    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110282760.png)
+      ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110282760.png)
 
 
 2. 删除属性：删除一个属性
@@ -220,9 +239,8 @@
 - **属性的属性定义**
 
 1. 属性值数据类型
-   
-> 标识该属性的值是数据类型，如:高度的为 System.Int32
-   
+    > 设置该属性的值的数据类型，如:高度的为 System.Int32
+
 2. 属性值编辑器
   
     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126284731.png)
@@ -232,8 +250,8 @@
      > 二次开发的属性编辑器的开发 请查看 【**属性编辑器二次开发**】 流程
 
 3. 自定义下拉选择项数据
-   
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126316733.png)
+    
+    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126316733.png)
 
      > 自定义下拉选择项数据：在【**选项数据源设置**】窗体配置要显示值和保存值,安装后即可在属性编辑器选择
     
@@ -245,8 +263,8 @@
      > 定义该属性的初始值(默认值)
 
 5. 属性类型
-   
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126343284.png)
+    
+     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557716027093.png)
 
      > 在属性视图中的分类， 可选 数据、事件、格式、其他
 
@@ -260,61 +278,53 @@
 
 7. 属性是否可用
 
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126403016.png)
+    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126403016.png)
 
      > true 启用；false 禁用，属性列表中显示为灰色，不能进行编辑
 
 8. 是否可以编辑
-    
-> true 可编辑；false 只读
-    
+    > true 可编辑；false 只读
+
 9. 显示
-    
-> 设置是否在属性列表中显示； true 显示、false 隐藏
-    
+    > 设置是否在属性列表中显示； true 显示、false 隐藏
+
 10. 常用属性
 
-    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110573385.png)
-
+    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557727648982.png)
      > 设置是否可以显示在属性列表中常用分类中； true 显示
 
 11. 是否样式属性
 
     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126427033.png)
-
      > 设置为true之后，在【**默认样式**】的编辑器中可以对其进行编辑，一般为字体，颜色等样式类型才这么弄
 
 12. 是否为实体
-    
-> 注意：如果该属性确实是实体，请务必设置为true
-    
+    > 注意：如果该属性确实是实体，请务必设置为true
+
 13. 是否为实体字段
-    
-> 注意：如果该属性确实是实体字段，请务必设置为true
-    
+    > 注意：如果该属性确实是实体字段，请务必设置为true
+
 14. 属性是否可以生产代码Code
-    
-> 设置为 false，在属性列表中配置的属性值将不会保存； 默认 true
-    
+    > 设置为 false，在属性列表中配置的属性值将不会保存； 默认 true
+
 15. 属性是否部署
-    
-> 设置为 false，此属性将不会在部署包中生成； 默认 true
-    
+    > 设置为 false，此属性将不会在部署包中生成； 默认 true
+
 16. 允许赋值
 
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110868570.png)
+    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557727506143.png)
 
-     > 设置为 true，此属性在【**控件属性设置**】规则使用
+    > 设置为 true，此属性可以在【**控件属性设置**】规则使用
 
-     > 说明：真正的赋值操作还需要此控件的执行系统部分实现
+    > 说明：真正的赋值操作还需要此控件的执行系统部分实现
 
 17. 允许取值
 
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557110941659.png)
+    ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557727561476.png)
 
-     > 设置为 true，此属性在【**表达式编辑器**】中使用
+    > 设置为 true，此属性可以在【**表达式编辑器**】中使用
 
-     > 说明：真正的取值操作还需要此控件的执行系统部分实现
+    > 说明：真正的取值操作还需要此控件的执行系统部分实现
 
 18. 属性值验证表达式
 
@@ -322,13 +332,13 @@
 
      > 设置一组正则表达式，用来验证属性值的合法性
 
-
 19. 描述
-    
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557112203690.png)
+
+     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557727605278.png)
 
      > 对该属性的基本描述，一般用来说明 使用方法、值分类、注意事项等等
-     > 此描述会出现在属性列表地址的 描述区域
+
+     > 此描述会出现在属性列表的 描述区域
 
 ## 3. 执行系统
 
@@ -336,24 +346,22 @@
 
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557112466055.png)
 
-
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557112426443.png)
 
-
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557112560450.png)
-
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557711639497.png)
 
 - **填写项目属性**
+
 1. Group Id:(不需要修改)
     - com.toone.v3.platform
 2. Artifact Id:
-    - widget-smartclient-JGTextBoxEs
+    - widget-smartclient-JGTextBoxExt
 3. Version:
     - 3.3.1-SNAPSHOT          (初始版本号)
 4. Series：
     - smartclient
 5. WidgetCode:
-    - JGTextBoxEs
+    - JGTextBoxExt
 
 - **完成项目创建**
 
@@ -361,16 +369,18 @@
 
 
 ### 3.2. 代码的文件结构
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557112670345.png)
+
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557711797978.png)
 
 
-1. JGTextBoxEsAction.js
+
+1. JGTextBoxExtAction.js
     - 控件对外接口部分
-2. JGTextBoxEsHandler.js
+2. JGTextBoxExtHandler.js
     - 控件数据同步实现
-3. JGTextBoxEs.js
+3. JGTextBoxExt.js
     - 控件渲染相关实现
-4. JGTextBoxEsless
+4. JGTextBoxExt.less
     - 控件样式部分，less模版
 5. property.xml
     - 控件属性元数据定义
@@ -380,13 +390,14 @@
 ### 3.3. 增加第三方依赖类库或插件(property.xml)
 
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557113823495.png)
+
 ```
 <property name = "RequireJS" type = "string" required = "true" canEmpty = "true" defaultValue = "extra/thirdpart/textbox/js/jquery-3.2.1.js,extra/thirdpart/textbox/js/loader.js" />
 ```
 
 - 依赖的资源，这里的资源可以是js或者css。可以使用这种方法，进行资源引入。
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557113798648.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557712266420.png)
 
 
 - 对应目录：前面的路径固定为： resource/page/itop/common/<控件系列>/ 
@@ -464,10 +475,8 @@
     - 如：列表、树表、分页控件等，代表多行记录的控件
 该类型一般不需要指定具体绑定哪个字段，如果有特殊需要也可指定绑定字段
 
-本例（文本JGTextBoxEs）中需要绑定的数据源为单值类型。
-
+本例（文本JGTextBoxExt）中需要绑定的数据源为单值类型。
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557121192425.png)
-
 ```
 <!-- 数据 -->
 <property name="TableName" type="tableName" required="true" canEmpty="true" desc="实体"/>
@@ -488,16 +497,17 @@
 ```
 
 
-### 3.7. 控件渲染(render下的JGTextBoxEs.js)
+### 3.7. 控件渲染(render下的JGTextBoxExt.js)
 控件向导初始化后，js文件中会生成模版。
 
 **控件模块初始化：**
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557122144220.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557712454345.png)
 
 **控件UI定义：**
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557122582576.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557712832343.png)
+
 
 **控件UI初始化，产生UI实例：**
 
@@ -505,36 +515,41 @@
 
 
 
-### 3.8 数据同步(data下的JGTextBoxEsHandler.js)
+### 3.8 数据同步(data下的JGTextBoxExtHandler.js)
 
 UI中的数据变化后，会自动同步到数据源，无需做处理。
 只需要处理数据源的数据变化后，同步到UI中。
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557124457738.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557713135325.png)
 
 
-### 3.9 增加控件样式(JGTextBoxEs.less)
-在JGTextBoxEs.less 文件中添加对应的样式
 
-1.  @{WidgetStyle}表示控件名，如JGTextBoxEs
+### 3.9 增加控件样式(JGTextBoxExt.less)
+在JGTextBoxExt.less 文件中添加对应的样式
+
+1.  @{WidgetStyle}表示控件名，如JGTextBoxExt
 
 2. 可直接把第三方css直接复制入该文件
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557123091848.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557713236078.png)
 
 
-### 3.10 事件绑定及提供控件对外接口(action下的JGTextBoxEsAction.js)
+
+### 3.10 事件绑定及提供控件对外接口(action下的JGTextBoxExtAction.js)
 
 1. 获取必要的服务（下面使用）
 2. 绑定事件，事件触发后执行对应的规则
 3. 提供控件的对外接口
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557123744755.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557713314477.png)
+
 
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557124028462.png)
 
 ### 3.11 控件版本修改(pom.xml)
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126746412.png)
+
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557713457554.png)
+
 
 
 
@@ -545,7 +560,7 @@ UI中的数据变化后，会自动同步到数据源，无需做处理。
 #### 4.1.1. 部署构件
 
  部署到本地，生成构件包到本地，通过分发构件包文件。其他用户在安装构件时，选择“从本地安装”来安装对应的构件包文件
-
+ 
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557124795935.png)
 
 
@@ -564,7 +579,6 @@ UI中的数据变化后，会自动同步到数据源，无需做处理。
 
     > 查看在**工具箱**中是否有此控件节点
     
-
   ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557124929467.png)
 
 
@@ -575,18 +589,24 @@ UI中的数据变化后，会自动同步到数据源，无需做处理。
 #### 4.2.1 构件打包
 
 1. 打包后自动生成构件包
+
 2. 获取生成构件包的路径
 
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557129507930.png)
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557129591660.png)
+
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557714000396.png)
+
 
 在target下生成的构件包，右键选择Properties，会自动生成构件包的路径
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557129904791.png)
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557129857630.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557714038868.png)
+
+
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557714101825.png)
+
 
 ```
-D:\work\eclipse\eclipse-v3-allinone\workspace\widget-smartclient-JGTextBoxEs\target\com.toone.v3.platform-widget-smartclient-JGTextBoxEs-1.0.0-SNAPSHOT.jar
+D:\work\eclipse\eclipse-v3-allinone\workspace\widget-smartclient-JGTextBoxExt\target\com.toone.v3.platform-widget-smartclient-JGTextBoxExt-1.0.0-SNAPSHOT.jar
 ```
 
 
@@ -594,11 +614,17 @@ D:\work\eclipse\eclipse-v3-allinone\workspace\widget-smartclient-JGTextBoxEs\tar
 
 1. 进入控制台
    - 开发系统- 开始菜单-> 管理控制台
+
 2. 执行系统- 输入服务地址 + system/console（如：127.0.0.1:8080/system/console）
+
 3. 构件管理
+
 4. 本地构件管理
+
 5. 安装/更新
+
 6. 选择jar包
+
 7. 安装或更新
 
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557130880298.png)
@@ -608,8 +634,8 @@ D:\work\eclipse\eclipse-v3-allinone\workspace\widget-smartclient-JGTextBoxEs\tar
 ## 5. 验证
 
 #### 5.1. 部署业务构件demo	    
-   开发系统新建一个业务构件，新建普通窗体，从工具箱中拖拽JGTextBoxEs控件到右侧窗体中，在最右侧配置文本控件的属性及事件，部署。
-
+   开发系统新建一个业务构件，新建普通窗体，从工具箱中拖拽JGTextBoxExt控件到右侧窗体中，在最右侧配置文本控件的属性及事件，部署。
+   
 ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557125658515.png)
 
 #### 5.2. 验证
