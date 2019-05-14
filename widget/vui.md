@@ -1,5 +1,7 @@
 # 自定义控件开发
+
 ## 一、基础知识
+
 高效的开发，离不开基础工程的搭建。在开始自定义窗体开发之前，有必要先了解以下基础知识：
 
 [Vue 教程](https://cn.vuejs.org/v2/guide/)
@@ -15,11 +17,12 @@
 [Vui 控件标签使用指南](http://service.yindangu.com:8018/module-operation!executeOperation?componentCode=divusermanual&windowCode=div_userguide#top_nav_menu) 
 
 ## 二、环境准备
+
 * 窗体自定义开发基于nodejs环境，如果本机没有安装nodejs，请到官网（https://nodejs.org/en/）下载nodejs，并安装。
 * 本地开发推荐编辑器VSCode（https://code.visualstudio.com/）
 
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1555919091559.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15578013269429.png)
 
 ## 三、使用指令
 *  **v3:package**   使用webpack打包    `npm run v3:package`
@@ -36,12 +39,14 @@
 1. 新建一个目录，如：example
 2. 在cmd命令行中    `cd example`
 3. 执行命令   
+
 ```
 npm install v3-cli –save-dev
 ```
+
 4. 根据指引设置控件信息，设置完成后，v3-cli脚手架会自动生成模板工程
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556076936415.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577996071226.png)
 
 * **Vstore仓库**：发布至Vstore的指定仓库
 * **插件类型**：生成的自定义控件的类型，widget为二次开发控件，resource为资源构件
@@ -52,9 +57,10 @@ npm install v3-cli –save-dev
 
 ## 五、工程目录结构
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556077061127.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577982521214.png)
 
 *  **build文件夹：**存放webpack配置文件信息
+
 	A、**webpack.config.js**： webpack打包配置主入口 **（请不要更改）**
 
 	B、**webpack.ext.config.js**：控件额外配置文件，如果控件需要额外定制打包配置，请调整此文件。
@@ -89,8 +95,77 @@ npm install v3-cli –save-dev
 
 ## 六、控件开发规范详解
 
-### 1、控件实现
+### 1、控件实现 
 
+#### 属性定义
+
+为了二次开发控件与平台实体数据实现无缝衔接，建议在二次开发控件中，涉及到数据绑定的属性使用平台实体数据格式。
+
+平台实体是一个数组，数组的每一项都是对象，对象中key值为字段编号，value值为字段值。
+
+二次开发标签与实体数据绑定一般有三种类型：
+
+1. 单行单值类型：绑定单个字段，如输入框等。
+
+```
+//例：单值类型
+props : {
+    value : {
+        type : String
+    }
+}
+
+```
+
+2. 单行多值类型：绑定多个字段，如下拉选择：同时绑定标识值与显示值。
+
+```
+//例：多值类型
+props : {
+    //多值类型的itemSource为实体数组中的当前行对象，一般为第一行
+    itemSource: {
+        type: Object,
+        default: function() {
+            return {};
+        }
+    },
+    itemValue: {
+        type: String,
+        default: "id"
+    },
+    itemText: {
+        type: String,
+        default: "text"
+    },
+},
+```
+
+3. 多行类型：绑定整个实体，如列表等
+
+```
+//例：绑定多行类型
+props : {
+    itemSource: {
+        type: Array,
+        default: function() {
+            return [];
+        }
+    },
+    itemValue: {
+        type: String,
+        default: "id"
+    },
+    itemText: {
+        type: String,
+        default: "text"
+    },
+},
+```
+
+实体字段类型包括：文本、整数、小数、布尔。
+> 如果需要绑定别的数据类型，建议在二次开发控件内部将数据先转换为实体字段类型之一，再去绑定平台实体。
+
+#### 控件代码
 widgets文件夹 `index.vue`，编写控件代码
 
 ```
@@ -168,6 +243,7 @@ export default {
 </script>
 ```
 
+
 ### 2、编写本地样例
 
 examples文件夹 `index.html`本地写测试代码页面
@@ -213,11 +289,7 @@ import '~@vPlatformMobileSkinVar';
 }
 ```
 
-皮肤变量查询：
-
-在项目的`node_modules`目录下`v3-platform-utils`中，
-`mobile`下的`var.less`文件为移动版，
-`web`下的`var.less`为网页版
+[皮肤变量查询](https://github.com/opensource-vplatform/vplatform-docs/blob/master/skinVariable/skinVariable.md)
 
 
 ### 4、控件安装资源构件
@@ -239,9 +311,9 @@ import '~@vPlatformMobileSkinVar';
 第一个红框为选择资源构件所在的Vstore仓库，二次开发构件要与资源构件在同一个仓库中
 
 ### 5、控件卸载资源构件
-执行   `npm run v3:install XXX`
+执行   `npm run v3:uninstall XXX`
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556092316059.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577997713024.png)
 
 红框为需要卸载的资源构件的构件名称
 
@@ -250,7 +322,7 @@ import '~@vPlatformMobileSkinVar';
 
 **方式1**：执行` npm run v3:start `，可以启动本地测试服务实时预览效果
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556092930233.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577990545510.png)
 
 执行npm run v3:start，会自动选择可用端口，自动打开浏览器
 
@@ -258,23 +330,23 @@ import '~@vPlatformMobileSkinVar';
 
 **方式2**：执行 `npm run v3:package`，dist文件夹下输出的index.html可以直接预览效果
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556093466440.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577983665154.png)
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556093469726.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577984141142.png)
 
 
 ### 7、打包生成Vstore构件
 执行  `npm run v3:pack`
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556093504138.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577984639263.png)
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556093508249.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15577985413985.png)
 
 
 ### 8、部署到Vstore仓库
 执行 `npm run v3:publish`
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556093571411.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1557798650553.png)
 
 红框为第一次部署到Vstore仓库时，会要求输入Vstore账号和密码。
 
@@ -283,7 +355,7 @@ import '~@vPlatformMobileSkinVar';
 
 执行  `npm run v3:apply`
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556094021671.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1557798736930.png)
 
 红框为第一次安装到服务时，会要求输入Vstore账号密码，以及安装到指定的执行系统地址。
 
@@ -299,4 +371,4 @@ import '~@vPlatformMobileSkinVar';
 
 部署窗体预览效果
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/1556095662819.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15578011604345.png)
