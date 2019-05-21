@@ -22,7 +22,7 @@
 * 本地开发推荐编辑器VSCode（https://code.visualstudio.com/）
 
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15578013269429.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/vui/15583395776638.png)
 
 ## 三、使用指令
 *  **v3:package**   使用webpack打包    `npm run v3:package`

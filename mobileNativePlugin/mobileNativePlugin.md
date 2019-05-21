@@ -15,13 +15,13 @@
 
 登录服务控制台，点击“移动端管理->移动应用打包”，进行APP初始设置和打包。
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556246249271.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584204964294.png)
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556247561433.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584205748338.png)
 
 
 
-（1）控制台地址的一般格式：服务地址:`端口号/system/consoled`
+（1）控制台地址的一般格式：服务地址:`端口号/system/console`
 
 （2）如果一体化环境，使用登录V开发平台的账号和密码登录
 
@@ -29,13 +29,13 @@
 
 ### 2、查看APP应用列表
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556247073523.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584225947644.png)
 
 *  **APP名称**：插件测试 
 
 *  **应用ID**：cn.com.vapp.toone.chenftest 
 
-*  **创建时间**：2018-04-19 19:56:09
+*  **创建时间**：2019-04-26 13:57:54 
 
 *  **添加版本**：创建新版本
 
@@ -62,7 +62,7 @@
 
 ### 4、资源配置
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556248858885.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1558422759614.png)
 
 *  **服务器地址**（可检测连接）
 
@@ -71,7 +71,7 @@
  &emsp;&emsp;①首页对应构件   
  &emsp;&emsp;②首页对应窗体
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556258864757.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584227928402.png)
 
 
 *  **广告图片配置**
@@ -89,7 +89,7 @@
 &emsp;&emsp;②启动图片
 &emsp;&emsp;③版本号（默认+1）
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556260438334.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584215275584.png)
 
 *  **平台提供插件**
 
@@ -101,7 +101,7 @@
 
 &emsp;&emsp;④Ping++支付（支持微信、支付宝）
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556261907783.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584215826214.png)
 
 ## 三、添加自定义插件
 
@@ -110,34 +110,34 @@
 如果所示，点击"+"
 选择已经准备好的自定义插件zip包
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556262185537.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584216193728.png)
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556262303396.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584217128960.png)
 
 插件上传流程：
 
 上传—》 校验—》 安装  —》 编译
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556263033944.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584217569095.png)
 
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556263004521.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584219517943.png)
 
 ### 2、插件相关属性
 
 点击插件【编辑】按钮，可以查看该插件相对应的属性配置
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556263285792.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1558421989551.png)
 
 ### 3、插件适用终端
 
 插件上传之后会显示该插件适用的终端平台，苹果/安卓
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556265130197.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584220284050.png)
 
 如果插件校验失败，可以点击按钮查看具体日志
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556265235805.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584241865016.png)
 
 
 
@@ -145,20 +145,20 @@
 
 点击插件【开启】按钮，开启插件适用
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556265469531.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584220905249.png)
 
 部分插件开启需要配置指定参数
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556265419656.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584221233260.png)
 
 
 ## 四、打包APP
 
 如图所示，点击"开始打包"
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556265642843.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584221574569.png)
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556265715906.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584222021457.png)
 
 具体的平台APP打包操作步骤详解可以参考  [V平台移动APP简介](http://www.toone.com.cn:9999/document/yidongkaifa/APP-001%E7%A7%BB%E5%8A%A8%E5%BA%94%E7%94%A8%E7%AE%80%E4%BB%8B.pdf)
 
@@ -183,7 +183,7 @@ button1--打开移动端原生日历
 
 button2--添加一个自定义日历行程
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556415247988.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584222797696.png)
 
 
 ### step3
@@ -245,15 +245,14 @@ moblieCalendar("createEvent")
 moblieCalendar( )
 ```
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556417998140.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584223468318.png)
 
 ### step5
 
 演示效果
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/1556422630109.png)
+![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/15584234325413.png)
 
-![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/mobileNativePlugin/Output.jpg)
 
 
 ## 五、总结

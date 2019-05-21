@@ -6,28 +6,28 @@
 
 ### 1.1. 概述
 
-当目前系统的控件无法满足项目开发需求的时候，用户可以二次开发自己控件
+当目前系统的控件无法满足项目开发需求的时候，用户可以二次开发自己的控件。
 
 > 特别说明：目前开源的源码中使用的开发方式是老的，我们不推荐，仅供参考；在做二次开发的时候，都以本教程中最新的开发方式进行开发
 
 ### 1.2. 名词解释
 
 1. **构件编码ComponentCode**
-   - 业务构件的全局唯一标识。
+	- 业务构件的全局唯一标识。
 
 2. **控件系列Series**
-   - 控件类型标识，同一类控件，通常使用同一套前端UI实现。
-
+	- 控件类型标识，同一类控件，通常使用同一套前端UI实现。
+    
 3. **窗体编码WindowCode**
-   - 当前构件下窗体唯一标识
+	- 当前构件下窗体唯一标识
 
 4. **控件编码WidgetCode**
-   - 当前窗体下控件唯一标识
+	- 当前窗体下控件唯一标识
 
 ### 1.3. 控件开发准备
 
 1. **控件系列、控件编码**
-    - 控件唯一标识，需要在开发前就确定下来
+    -  控件唯一标识，需要在开发前就确定下来
 
 2. **外观、交互效果**
     - 首先控件开发之前，需要了解控件的外观、交互效果部分，这是控件最重要的部分。接下来的一些设计实现，
@@ -35,10 +35,10 @@
 
 3. **控件数据存储**
     - 确定控件关联的数据规模，常见的有：
-      - 关联某个实体的一列； 例如：文本，长文本等。
-      - 关联某个实体多列；  例如：下拉选择，多选组等
-      - 关联某个实体；  例如：列表、树表等
-      - 完全不关联实体；    例如：按钮、标签等
+      - 关联某个实体的一列 	例如：文本，长文本等。
+      - 关联某个实体多列		例如：下拉选择，多选组等
+      - 关联某个实体		例如：列表、树表等
+      - 完全不关联实体		例如：按钮、标签等
 
 4. **控件支持的事件**
     - 控件支持哪些事件类型。当触发了事件之后，必须执行预先配置好的规则。
@@ -55,7 +55,7 @@
     - 如面板，容器等，本身并不带任何内容，但是可以装载其他的控件，或者窗体。
 
 2. **静态控件**
-    - 标签，按钮等，控件的外观，以及内容在定义期就完全决定下来，不需要绑定实体数据
+    - 标签，按钮等，控件的外观，以及内容在定义期就完全决定下来，不需要绑定实体数据。
 
 3. **字段控件**
     - 文本框等输入类的控件，和数据源绑定，用于数据录入，或者数据展示。控件开发重点在于数据同步。
@@ -68,8 +68,11 @@
 - 目前控件主要有三个控件系列，也对应着有三个渲染引擎。
 
 1. 普通窗体
+	
 2. 网页窗体
+	
 3. 移动窗体
+	
 
 > 注意：下面讲是 **普通窗体** 的开发，以文本输入框为例。
 
@@ -424,7 +427,73 @@
 
 1. **必写**，defaultValue=“true”表示该控件内不可放入其他控件，false表示可放入其他控件，比如容器类控件；
 2. name 属性值对应 **开发系统中配置的属性编码**
-3. type 属性值支持 code, string, event, number, boolean
+3. type 属性值支持 icon、language、expLanguage、code、string、displayFormat、boolean、number、color、font、alignment、event、tableName、columnName、padding、margin等。
+
+#### type属性值介绍
+
+1. icon：图标
+
+   属性值为图标
+2. language：多语言
+
+   属性值为字符串，需要支持多语言
+
+3. expLanguage：多语言表达式
+
+   属性值为表达式，且需要支持多语言
+
+4. code
+
+   属性值为编码
+
+5. string
+
+   属性值为字符串
+
+6. displayFormat
+
+   属性值为显示格式
+
+7. boolean
+
+   属性值为布尔
+
+8. number
+
+   属性值为数字
+
+9. color
+
+   属性值为颜色
+
+10. font
+
+    属性值为字体
+
+11. alignment
+
+    属性值为对齐方式
+
+12. event
+
+    属性值为事件
+
+13. tableName
+
+    属性值为实体
+
+14. columnName
+
+    属性值为实体字段
+
+15. padding
+
+    属性值为内边距
+
+16. margin
+   
+    属性值为外边距
+
 
 ### 3.5. 增加事件属性(property.xml)
 
@@ -457,21 +526,49 @@
 
 1. singleRecord（单值类型）
 
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126478054.png)
+    ```
+    <dataBindings>
+		<dataBinding name="datasource" required="false">
+			<storeType>singleRecord</storeType>
+			<dataSource name="TableName" canEmpty="true" desc="表名"/>
+			<dataMembers>
+				<dataMember name="ColumnName" type="String" canEmpty="true"  isRelation="false" desc="字段名称"/>
+			</dataMembers>
+		</dataBinding>
+	</dataBindings>
+    ```
 
    - 如：文本、小数、整数等，代表单行记录中的某个字段值的控件
 单值类型的数据源只需指定一个字段
 
 2. singleRecordMultiValue（多值类型）
 
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126503904.png)
+     ```
+     <dataBindings>
+		<dataBinding name="datasource" required="true">
+			<storeType>singleRecordMultiValue</storeType>
+			<dataSource name="TableName" canEmpty="true" desc="表名"/>
+			<dataMembers>
+	            <dataMember name="ColumnName" type="text" required="true" canEmpty="true" desc="显示字段"/>
+	            <dataMember name="IDColumnName" type="text" required="true" canEmpty="true" desc="标识字段"/>
+			</dataMembers>
+		</dataBinding>
+	</dataBindings>
+     ```
 
    - 如：下拉选择，多选组、单选组等，需要同时存储控件的标识值和显示值的控件
 多值控件一般需要绑定二个或以上的字段
 
 3. set（多行类型）
 
-     ![Alt text](https://github.com/opensource-vplatform/vplatform-docs/blob/master/mdImages/widget/smartclient/1557126525044.png)
+     ```
+     <dataBindings>
+        <dataBinding name="datasource" required="true">
+			<storeType>set</storeType>
+			<dataSource name="TableName" canEmpty="false" desc="表名"/>
+        </dataBinding>
+     </dataBindings>
+     ```
 
     - 如：列表、树表、分页控件等，代表多行记录的控件
 该类型一般不需要指定具体绑定哪个字段，如果有特殊需要也可指定绑定字段
